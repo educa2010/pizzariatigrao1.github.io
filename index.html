@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tigrão Pizza 🍕 | Delivery Artesanal</title>
+<meta name="description" content="Tigrão Pizza - Pizzas artesanais salgadas, doces e refrigerantes. Pedido fácil pelo WhatsApp.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Tigrão<span>Pizza</span> 🍕</div>
+  <div class="hamburger" onclick="menu()">☰</div>
+</header>
+
+<nav id="nav">
+  <a onclick="go('home')">Home</a>
+  <a onclick="go('salgadas')">Salgadas</a>
+  <a onclick="go('doces')">Doces</a>
+  <a onclick="go('bebidas')">Refrigerantes</a>
+  <a onclick="go('checkout')">Carrinho</a>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <div class="hero">
+    <div>
+      <h1>A pizza mais braba da cidade 🐯🍕</h1>
+      <p>Massa artesanal, recheio absurdo e pedido fácil</p>
+      <div style="margin-top:30px;">
+        <button class="next-btn" onclick="proxima('salgadas')">Ver Pizzas Salgadas 🍕</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SALGADAS -->
+<div id="salgadas" class="page">
+<section>
+<h2>Pizzas Salgadas</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSetY5d0rQCAGZnsjh7IZEsDqSwUHbBrEx8yw&s">
+<div class="card-content">
+  <h3>Calabresa <span>R$35</span></h3>
+  <button onclick="pizza('Calabresa',35)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYTNZSZIoidS_EN47b13VD_g60tl4n0RWCVQ&s">
+<div class="card-content">
+  <h3>Frango c/ Catupiry <span>R$38</span></h3>
+  <button onclick="pizza('Frango c/ Catupiry',38)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://redefoodservice.com.br/wp-content/uploads/2023/07/Pizza-Quatro-Queijos.jpg">
+<div class="card-content">
+  <h3>Quatro Queijos <span>R$40</span></h3>
+  <button onclick="pizza('Quatro Queijos',40)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.receitasnestle.com.br/sites/default/files/styles/recipe_detail_desktop_new/public/srh_recipes/2eb7ece4ae9a67b773aa138589e2031d.jpg">
+<div class="card-content">
+  <h3>Portuguesa <span>R$37</span></h3>
+  <button onclick="pizza('Portuguesa',37)">Adicionar</button>
+</div>
+</div>
+
+</div>
+<div style="text-align:center;">
+  <button class="next-btn" onclick="proxima('doces')">Próxima: Doces 🍫</button>
+</div>
+</section>
+</div>
+
+<!-- DOCES -->
+<div id="doces" class="page">
+<section>
+<h2>Pizzas Doces</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://recipesblob.oetker.com.br/assets/1c845fe5fa384886b24057225001f991/1272x764/pizza-de-brigadeiro-ia.webp">
+<div class="card-content">
+  <h3>Chocolate <span>R$36</span></h3>
+  <button onclick="pizza('Chocolate',36)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4EWNPi7PuKoNzspIpqSpIeAvr6K9QP_YkWQ&s">
+<div class="card-content">
+  <h3>Banana c/ Canela <span>R$34</span></h3>
+  <button onclick="pizza('Banana c/ Canela',34)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc-332uiUsyUucEAi4rAyWkDZAEuARgGCBsQ&s">
+<div class="card-content">
+  <h3>Romeu e Julieta <span>R$35</span></h3>
+  <button onclick="pizza('Romeu e Julieta',35)">Adicionar</button>
+</div>
+</div>
+
+</div>
+<div style="text-align:center;">
+  <button class="next-btn" onclick="proxima('bebidas')">Próxima: Refrigerantes 🥤</button>
+</div>
+</section>
+</div>
+
+<!-- BEBIDAS -->
+<div id="bebidas" class="page">
+<section>
+<h2>Refrigerantes</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwELhkdB-jIKxsL81-mqCk0TmU8VLxonQYww&s">
+<div class="card-content">
+  <h3>Coca-Cola 2L <span>R$12</span></h3>
+  <button onclick="add('Coca-Cola 2L',12)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://www.imigrantesbebidas.com.br/bebida/images/products/full/1885-refrigerante-guarana-antarctica-2l.20250131112123.jpg">
+<div class="card-content">
+  <h3>Guaraná 2L <span>R$12</span></h3>
+  <button onclick="add('Guaraná 2L',12)">Adicionar</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://zaffari.vtexassets.com/arquivos/ids/262965/1010783-00.jpg">
+<div class="card-content">
+  <h3>Fanta Laranja <span>R$12</span></h3>
+  <button onclick="add('Fanta Laranja',12)">Adicionar</button>
+</div>
+</div>
+
+</div>
+<div style="text-align:center;">
+  <button class="next-btn" onclick="proxima('checkout')">Ir para Carrinho 🛒</button>
+</div>
+</section>
+</div>
+
+<!-- CHECKOUT -->
+<div id="checkout" class="page">
+<section>
+<h2>Seu Carrinho</h2>
+<div class="checkout-box" id="lista"></div>
+<div class="total" id="total"></div>
+<div class="whats" onclick="finalizar()">Finalizar pedido no WhatsApp</div>
+</section>
+</div>
+
+<div class="cart" onclick="go('checkout')">
+🛒<span id="count">0</span>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <h3 id="pname"></h3>
+    <select id="borda">
+      <option>Sem borda</option>
+      <option>Borda de Catupiry (+R$12)</option>
+      <option>Borda de Chocolate (+R$12)</option>
+    </select>
+    <select id="peda">
+      <option>8 pedaços</option>
+      <option>4 pedaços</option>
+    </select>
+    <button onclick="confirm()">Confirmar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
